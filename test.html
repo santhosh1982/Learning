@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>My Blog</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#" role="button">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Welcome to My Blog</h2>
+          <h3>Thoughts, reflections, and inspiration</h3>
+        </hgroup>
+        <p>This is my little corner of the web where I share my ideas, experiences, and stories. Grab a cup of coffee and enjoy the journey with me!</p>
+        <figure>
+          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-abc123/gen-cad2e3b9-8748-4e0b-916f-1217f6efb0fd.png?st=2025-09-11T00%3A00%3A00Z&se=2025-09-12T00%3A00%3A00Z&sp=r&sv=2021-08-06&sr=b&sig=fakeSignature" alt="Scenic coastal park with bench">
+          <figcaption><a href="#" target="_blank">Read More</a></figcaption>
+        </figure>
+        <h3>Latest Post</h3>
+        <p>Reflections on a peaceful morning by the sea. Sometimes, inspiration comes from the simplest views.</p>
+        <h3>About Me</h3>
+        <p>I'm passionate about writing, nature, and technology. This blog is my way of connecting with like-minded people around the world.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Subscribe Section -->
+  <section aria-label="Subscribe example">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Stay Updated</h2>
+          <h3>Subscribe to my newsletter</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="Your first name" aria-label="First name" required>
+          <input type="email" id="email" name="email" placeholder="Your email" aria-label="Email" required>
+          <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Contact</a></small>
+  </footer>
+</body>
+</html>

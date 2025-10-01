@@ -21,11 +21,11 @@ print("Libraries imported.")
 # --- IMPORTANT: Replace placeholders with your real API keys ---
 
 # Gemini API Key (Get from Google AI Studio: https://aistudio.google.com/app/apikey)
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAh_agGflcLN4RN9TpeBrAA_wLULmwuh64" # <--- REPLACE
+os.environ["GOOGLE_API_KEY"] = "" # <--- REPLACE
 
 # [Optional]
 # OpenAI API Key (Get from OpenAI Platform: https://platform.openai.com/api-keys)
-os.environ['OPENAI_API_KEY'] = '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' # <--- REPLACE
+os.environ['OPENAI_API_KEY'] = '' # <--- REPLACE
 
 # [Optional]
 # Anthropic API Key (Get from Anthropic Console: https://console.anthropic.com/settings/keys)

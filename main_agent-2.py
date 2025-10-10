@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.ERROR)
 
 print("Libraries imported.")
 
-
+os.environ['GOOGLE_API_KEY'] = 'AIzaSyAh_agGflcLN4RN9TpeBrAA_wLULmwuh64'
 
 # --- Verify Keys (Optional Check) ---
 print("API Keys Set:")

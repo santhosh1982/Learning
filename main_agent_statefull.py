@@ -49,9 +49,50 @@ from google.adk.tools.tool_context import ToolContext
 # Import necessary session components
 from google.adk.sessions import InMemorySessionService
 
+
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+cred = credentials.ApplicationDefault()  # Or use a service account file
+firebase_admin.initialize_app(cred)
+db = firestore.client()
+
+class FirestoreSessionService:
+    def __init__(self, db):
+        self.db = db
+
+    async def save_session(self, session_id, session_data):
+        self.db.collection('adk_sessions').document(session_id).set(session_data)
+
+    async def load_session(self, session_id):
+        doc = self.db.collection('adk_sessions').document(session_id).get()
+        return doc.to_dict() if doc.exists else None
+
+    async def delete_session(self, session_id):
+        self.db.collection('adk_sessions').document(session_id).delete()
+
+    async def create_session(self, app_name: str, user_id: str, session_id: str, state: dict):
+        self.db.collection('adk_sessions').document(session_id).set({"app_name": app_name, "user_id": user_id, "session_id": session_id, "messages": [], "state": state})
+        
+
+    async def get_session(self, app_name: str, user_id: str, session_id: str):
+        doc = self.db.collection('adk_sessions').document(session_id).get()
+        return doc.to_dict() if doc.exists else None
+
+    async def update_session(self, app_name: str, user_id: str, session_id: str, session_obj: dict):
+        self.db.collection('adk_sessions').document(session_id).set(session_obj)
+        
+
+
+# --- Configuration for Firestore ---
+# Replace with your actual Google Cloud Project ID
+GCP_PROJECT_ID = "GCP-COMPLETE"
+
 # Create a NEW session service instance for this state demonstration
 session_service_stateful = InMemorySessionService()
 print("✅ New InMemorySessionService created for state demonstration.")
+session_service_stateful = FirestoreSessionService(db)
+print(f"✅ FirestoreSessionService created for project '{GCP_PROJECT_ID}'.")
 
 # Define a NEW session ID for this part of the tutorial
 SESSION_ID_STATEFUL = "session_state_demo_001"

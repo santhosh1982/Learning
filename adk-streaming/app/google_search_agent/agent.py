@@ -74,6 +74,9 @@ initial_state = {
 }
 
 import asyncio
+import nest_asyncio
+
+nest_asyncio.apply()
 # Create the session, providing the initial state
 session_stateful = asyncio.run(session_service_stateful.create_session(
     app_name=APP_NAME, # Use the consistent app name
@@ -87,6 +90,7 @@ print(f"✅ Session '{SESSION_ID_STATEFUL}' created for user '{USER_ID_STATEFUL}
 retrieved_session = asyncio.run(session_service_stateful.get_session(app_name=APP_NAME,
                                                          user_id=USER_ID_STATEFUL,
                                                          session_id = SESSION_ID_STATEFUL))
+
 print("\n--- Initial Session State ---")
 if retrieved_session:
     print(retrieved_session.state)

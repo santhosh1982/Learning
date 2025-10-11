@@ -1,0 +1,240 @@
+{
+  "eval_set_id": "evalset9dd3e2",
+  "name": "evalset9dd3e2",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "case76acf9",
+      "conversation": [
+        {
+          "invocation_id": "e-a3dfba48-6634-4447-9da9-1f6f3c57933d",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "Hello there!\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-6fc8bb2c-4d75-420d-b3c2-17fdbc75e586",
+                "args": {
+                  "agent_name": "greeting_agent"
+                },
+                "name": "transfer_to_agent"
+              },
+              {
+                "id": "adk-4a442f50-ba33-4201-88fb-c8ab58ee8684",
+                "args": {},
+                "name": "say_hello"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760179855.933793
+        },
+        {
+          "invocation_id": "e-a9916480-cb77-4ca4-8c9f-4d69908da70e",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "what is the whether in london?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "The weather in London is cloudy with a temperature of 15°C.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-163b42c8-78dd-469d-83f6-9e6efca929b1",
+                "args": {
+                  "agent_name": "weather_agent_v5_model_guardrail"
+                },
+                "name": "transfer_to_agent"
+              },
+              {
+                "id": "adk-b54b4b20-cce6-45b2-b73c-a5d86839ff48",
+                "args": {
+                  "city": "london"
+                },
+                "name": "get_weather_stateful"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760179902.814316
+        },
+        {
+          "invocation_id": "e-451dbcda-cbbb-4892-a6d8-7216d39267b4",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "what about paris?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "I am sorry, weather checks for Paris are currently disabled.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-85fdb01f-4338-4349-8f84-dfe60f3f3709",
+                "args": {
+                  "city": "paris"
+                },
+                "name": "get_weather_stateful"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760179917.721663
+        },
+        {
+          "invocation_id": "e-88a44bd3-552c-441a-905b-0a3e85e7c96b",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "bye"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "Goodbye! Have a great day.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-a730dbb0-5643-47b6-ba17-78ff753f15b7",
+                "args": {
+                  "agent_name": "farewell_agent"
+                },
+                "name": "transfer_to_agent"
+              },
+              {
+                "id": "adk-7f6754a3-8171-4bab-9a7a-6382c22202e4",
+                "args": {},
+                "name": "say_goodbye"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760179932.066867
+        }
+      ],
+      "session_input": {
+        "app_name": "google_search_agent",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1760179970.1097405
+    }
+  ],
+  "creation_timestamp": 1760093222.5491402
+}
